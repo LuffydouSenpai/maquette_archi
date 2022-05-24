@@ -1,0 +1,233 @@
+@font-face {
+    font-family: "sego";
+    src: url("../font/SEGOEUI.TTF");
+}
+
+/* police d'ecriture */
+* {
+    font-family: "sego", Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* reset style */
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+p,
+form,
+input,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    display: none;
+}
+
+#headerImg {
+    position: relative;
+    height: 24vh;
+    /* border: red 1px solid; */
+    overflow: hidden;
+}
+
+#headerImg>img {
+    width: 100%;
+}
+
+/* titre sur l'image */
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* le "BR" sur le logo */
+.badge {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.3rem 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* le "Architects" sur le logo */
+.hide {
+    display: none;
+}
+
+/* section project */
+
+#projects,
+#about,
+#contact {
+    width: 85%;
+    margin: 3rem auto;
+}
+
+figure>img {
+    width: 100%;
+    transition: all 0.4s;
+}
+
+figure>img:hover {
+    transform: scale(1.3);
+}
+
+#projects>h2 {
+    margin-bottom: -1rem;
+}
+
+hr {
+    margin: 2rem auto;
+}
+
+figure {
+    position: relative;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+figcaption {
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: .5rem 1rem;
+    position: absolute;
+    z-index: 1;
+}
+
+/* section about */
+
+#about>p {
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+}
+
+.cardImg {
+    width: 100%;
+    margin-bottom: -0.5rem;
+    filter: grayscale(0.7);
+}
+
+.card>h3 {
+    margin: 1rem auto;
+}
+
+.card>h4 {
+    margin-bottom: 1rem;
+    color: gray;
+}
+
+.card>p {
+    margin-bottom: 1rem;
+}
+
+.card>button {
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+#contact input {
+    width: 100%;
+    margin: 0.5rem auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#contact div:last-child input {
+    background-color: black;
+    color: white;
+    width: fit-content;
+    border: none;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* carte map */
+#map {
+    width: 85%;
+    margin: 3rem auto 0.5rem auto;
+}
+
+#map img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+/* footer */
+
+footer {
+    background-color: black;
+    color: white;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* responsive tablette */
+@media screen and (min-width:576px) {
+    nav {
+        height: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #menu {
+        display: flex;
+        list-style-type: none;
+    }
+
+    #menu a {
+        text-decoration: none;
+        color: black;
+        padding-left: 1rem;
+    }
+
+    #headerImg {
+        height: 36vh;
+    }
+
+    .hide {
+        display: inline;
+    }
+
+    figure,
+    .card {
+        position: relative;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        width: 48.5%;
+    }
+
+    #diaporama,
+    #team {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width:992px) {
+
+    #headerImg {
+        height: 77vh;
+    }
+
+    figure,
+    .card {
+        width: 24%;
+    }
+}
